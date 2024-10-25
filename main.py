@@ -11,7 +11,7 @@ def select(input_func):
 
 
 #Обьявление переменных
-file = 'C:/Users/user/учеба/IPO/lb7/dump.json'  
+file = 'dump.json'  
 number = str(input("Введите код профессии для поиска: "))
 skills = False
 
