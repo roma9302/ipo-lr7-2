@@ -2,13 +2,6 @@
 import json
 
 
-#Создание декоратора
-def select(input_func):    
-    def output_func():     
-        print("=============== Найдено ===============") 
-        input_func()                
-    return output_func     
-
 
 #Обьявление переменных
 file = 'dump.json'  
@@ -43,13 +36,9 @@ with open(file, 'r', encoding='utf-8') as file:
 #Проверка условий
 if not skills:
     print("=============== Не Найдено ===============") 
+    
+    
 else:
-    @select
-    def input():
-        print(f"{specialty_code} >> Специальность {specialty_title} , {specialty_educational}")
-        print(f"{skill_code} >> Квалификация {skill_title}")
-
-
-
-#Вызов оригинальной функции
-input()
+    print("=============== Найдено ===============") 
+    print(f"{specialty_code} >> Специальность {specialty_title} , {specialty_educational}")
+    print(f"{skill_code} >> Квалификация {skill_title}")
