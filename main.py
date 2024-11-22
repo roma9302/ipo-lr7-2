@@ -28,6 +28,7 @@ with open(file, 'r', encoding='utf-8') as file:
                         if specialty_code in number:  
                             specialty_title = profession["fields"].get("title")
                             specialty_educational = profession["fields"].get("c_type")
+                            break
                            
                       
                 break  
