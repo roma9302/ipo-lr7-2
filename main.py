@@ -19,13 +19,16 @@ with open(file, 'r', encoding='utf-8') as file:
             if skill["fields"].get("code") == number: 
                 skill_code = skill["fields"].get("code")
                 skill_title = skill["fields"].get("title")
+                skill_specialty =  skill["fields"].get("specialty")
                 skills = True
+                
             
               
                 for profession in data:
                     if profession.get("model") == "data.specialty":
                         specialty_code = profession["fields"].get("code")
-                        if specialty_code in number:  
+                        specialty_pk = profession["pk"]
+                        if specialty_code in number and  skill_specialty == specialty_pk :  
                             specialty_title = profession["fields"].get("title")
                             specialty_educational = profession["fields"].get("c_type")
                             break
